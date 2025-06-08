@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Google Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        .login-box { display: inline-block; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        .google-color { color: #db4437; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2 class="google-color">Sign in with Google, Facebook, Apple</h2>
+        <p>Đặc cách cho vô nhé :).</p>
+        <button onclick="fakeLogin()">Continue</button>
+    </div>
+<script>
+  function fakeLogin() {
+    localStorage.setItem('isLoggedIn', 'true');
+    window.location.href = '/index.html'; // Thay bằng trang chủ thật của bạn
+  }
+</script>
+
+</body>
+</html>

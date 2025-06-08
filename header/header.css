@@ -1,0 +1,331 @@
+/* Header Styles */
+.header {
+    padding-top : 60px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0; /* Fixed position at the top */
+    left: 0;    /* Full width */
+    right: 0;   /* Full width */    
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: 70px; /* Fixed height for the header */
+    box-sizing: border-box; /* Include padding in height */
+    transition: top 0.3s ease-in-out;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Left Section */
+.header-left img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 15px;
+}
+
+/* Center Section (Search Bar) */
+.header-center{
+    flex-grow: 1; /* Allow center section to take available space */
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center;
+    padding: 0 20px; /* Add padding for spacing */
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f7f9fa;
+    border: 1px solid #d1d7dc;
+    border-radius: 9999px; /* Make it pill-shaped */
+    padding: 8px 15px;
+    flex-grow: 1; /* Allow search bar to take available space */
+    max-width: 1000px; /* Limit max width of search bar */
+}
+
+.search-icon {
+    color: #160c30;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex-grow: 1;
+    font-size: 15px;
+    color: #1c1d1f;
+}
+
+.search-bar input::placeholder {
+    color: #6a6f73;
+}
+
+/* Right Section */
+.business-link,
+.teach-link,
+.my-learning {
+    text-decoration: none;
+    color: #1c1d1f;
+    font-weight: 500;
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+.cart-icon {
+    position: relative;
+    color: #1c1d1f;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: hsl(186.98 100% 8.43%);
+    color: #fff;
+    font-size: 11px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    line-height: 1;
+}
+
+.header .btn {
+    padding: 10px 15px;
+    border: 1px solid #1c1d1f;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    white-space: nowrap;
+}
+
+.header .btn-login {
+    background-color: #fff;
+    color: #1c1d1f;
+    margin-right: 10px;
+}
+
+.header .btn-login:hover {
+    background-color: #e8f2f7;
+     
+}
+
+.header .btn-signup {
+    background-color: hsl(188, 83%, 19%);
+    color: #fff;
+    margin-right: 10px;
+}
+
+.header .btn-signup:hover {
+    background-color: hsl(186.98 100% 8.43%);
+}
+
+
+.mega-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.explore-link {
+  padding: 10px 20px;
+  color: #0f0000;
+  display: inline-block;
+  text-decoration: none;
+    font-weight: bold;  
+    border-radius: 8px;
+}
+
+.mega-menu-content {
+    font-family: Arial, sans-serif;
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 250px;
+  z-index: 1000;
+}
+
+.mega-menu-container:hover .mega-menu-content {
+  display: block;
+}
+
+.mega-menu-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0;
+}
+
+.mega-menu-column {
+    position: relative;
+
+}
+.mega-menu-column li > a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: -5px;
+  bottom:0;
+  margin-top:0%;
+  left: 100%;
+  background: white;
+  min-width: 250px;
+  z-index: 1001;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+
+}
+
+.header li:hover > .submenu {
+  display: block;
+}
+.header li:hover > a {
+  background-color: hsl(187, 43%, 85%);
+  color: #0f0000;
+}
+
+.submenu-level-3 {
+  left: 100%;
+  position: absolute;
+  top: 0;
+
+}
+/* tạo block để kh bị mất khi di chuột*/
+.mega-menu-container.active .mega-menu-content {
+  display: block;
+}
+/* Hover hiệu ứng mượt hơn */
+.header li > a i {
+  float: right;
+  margin-left: 5px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.mega-menu-column h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+}
+
+
+.profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-box {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 220px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 12px;
+      z-index: 999;
+    }
+    .profile-box a{
+        text-decoration: none;
+    }
+    .profile-box h4 {
+      margin: 0 0 4px;
+    }
+
+    .profile-box p {
+      margin: 4px 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .profile-wrapper:hover .profile-box {
+      display: block;
+    }
+
+    .profile-wrapper:focus-within .profile-box {
+  display: block;
+}
+
+/* Responsive adjustments (basic) */
+@media (max-width: 992px) {
+    .business-link,
+    .teach-link {
+        display: none; /* Hide business/teach links on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 10px;
+    }
+    .search-bar {
+        display: none; /* Allow full width on small screens */
+    }
+    .header-right .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .cart-icon {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .btn-language {
+        display: none;
+    }
+    
+    
+}
+
+@media (max-width: 576px) {
+    .header-right .btn-signup,
+    .header-right .btn-login {
+        display: none; }
+    .header-left {
+        flex: 1; /* Allow logo to take available space */
+        justify-content: center; /* Center the logo */
+    }
+    .header-center, .mega-menu-container {
+        display: none; /* Hide search bar on very small screens */
+    }
+    
+    
+}

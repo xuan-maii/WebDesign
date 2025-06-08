@@ -1,0 +1,871 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding-top:60px;
+    font-family: 'DM Sans','SF Pro Display', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #1f2021;
+    margin: 0;
+}
+#product-header{
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08), 0 4px 12px rgba(6, 17, 118, 0.16);
+    top: 0;
+    bottom: auto;
+    padding: 0;
+    color: hsl(0 0% 100%);
+    background-color: hsl(186.98 100% 8.43%);
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.38, 0.9);
+}
+#product-header-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 4rem;
+    height: 100%;
+    padding: 0.5rem 1rem;
+}
+#lead-lead-margin-right{
+    display: block;
+    margin-right: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+#lead-title{
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    margin-bottom: 0.25rem;
+}
+.course-info{
+    display: inline-flex;
+    line-height: 0.875rem;
+}
+.normal-text{
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.875rem;
+}
+.best-seller{
+    display: inline-flex;
+    align-items: center;
+    padding-block: 0.25rem 0.25rem;
+    padding-inline: 0.5rem 0.5rem;
+    white-space: nowrap;
+    background-color: #c2e9eb;
+    color: #1f453d;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+}
+.heading-xs{
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 0.75rem;
+    letter-spacing: 0.0125rem;
+}
+a{
+    text-decoration: none;
+}
+.ratings{
+    margin-right: 0.5rem;
+}
+.star-rating{
+    display: inline-flex;
+    align-items: center;
+    color: 
+    #ffad2a;
+}
+.star-rating .rating-icon{
+    font-size: 0.85rem;
+}
+.star-number{
+    margin-inline-end: 0.25rem;
+}
+.small-heading{
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 0.875rem;
+}
+.small-icon {
+    width: 16px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-icon i {
+    font-size: 12px;
+    display: block;
+    line-height: 1; }
+.star-rating .small-icon{
+    display: block;
+}
+.link{
+    text-decoration: underline;
+    color: #c0c4fc;
+}
+.fa-regular:before,
+.fa-solid:before {
+    content: var(--fa);
+    font-family: "Font Awesome 6 Free";
+}
+#page-container{
+    position: relative;
+}
+#top-container{
+    background-color: hsl(186.98 100% 8.43%);
+    padding: 2rem 0 2rem 0;
+}
+#inner-top-container{
+    max-width: 74rem;
+    margin: 0 auto;
+}
+#link-page{
+    max-width: 43.75rem;
+    margin: 0 3rem 1rem;
+    color: #fff;
+}
+#breadcrumb{
+    position: relative;
+    top: -0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-block: 0;
+}
+#breadcrumb a{
+    color: #c0c4fc;
+    padding-block: 0.25rem;
+    padding-inline: 0;
+}
+.icon{
+    fill: currentColor;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.breadcrumb .icon{
+    position: relative;
+    inset-block-start: 0.0625rem;
+    margin: 0.25rem;
+}
+#main-content{
+    max-width: 43.75rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: #fff;
+}
+#coures-name{
+    margin-bottom: 1rem;
+    max-width: 74rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: clamp(1.5rem, calc(1.5rem + (2 - 1.5) * ((100vw - 22.5rem) / (90 - 22.5))), 2rem);
+    max-inline-size: 36em;
+}
+#short-description{
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: clamp(1.065rem, calc(1.065rem + (1.125 - 1.065) * calc((100vw - 22.5rem) / (90 - 22.5))), 1.125rem);
+}
+.course-info-item{
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+}
+.course-info-item .best-seller{
+    margin-right: 0;
+}
+.row-item{
+    display: flex;
+    flex-wrap: wrap;
+}
+#instructor{
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+}
+#time-language{
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+.info-icon{
+    margin-right: 0.5rem;
+}
+#sidebar-position{
+    max-width: 74rem;
+    margin: 0 auto;
+}
+.sidebar{
+    margin-left: 49.75rem;
+    position: absolute;
+    display: block;
+    top: 2rem;
+}
+.sidebar.sidebar-fixed{
+    margin-left: 49.75rem;
+    position: fixed;
+    top: 2rem;
+    z-index: 3;
+    animation: fade-in 250ms linear 250ms forwards;
+    display: block;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.sidebar-container{
+    width: 21.25rem;
+    border-bottom: 1px solid #d1d2e0;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+    background-color: #fff;
+}
+.video-intro{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.sidebar.sidebar-fixed .video-intro{
+    display: none;
+}
+#play-video{
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-inline: 0.25rem 0.25rem;
+}
+#vid-img{
+    display: block;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+#vid-img img{
+    background-size: cover;
+    border: 1px solid #d1d2e0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#darken-bgr{
+    border: 1px solid #d1d2e0;
+    background: linear-gradient(180deg,rgba(22,22,29,0) 0%, rgba(22, 22, 0, 0.9) 100%);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#play-icon{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    block-size: 100%;
+    inline-size: 100%;
+}
+#play-icon svg{
+    inline-size: 4rem;
+    block-size: 4rem;
+}
+.overlay-text{
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mid-heading{
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+#purchase-section{
+    padding: 1.5rem;
+}
+.buy-box-item{
+    margin-bottom: 0.5rem;
+}
+#price{
+    align-items: center;
+    color: #00262b;
+    display: flex;
+    flex-flow: row wrap;
+}
+.buy-box-price{
+    line-height: 1;
+    margin-inline-end: 0.5rem;
+}
+.xl-heading{
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: clamp(1.25rem, calc(1.25rem + (1.5 - 1.25) * calc((100vw - 2rem) / (90 - 22.5))), 1.5rem );
+    max-inline-size: 22.5rem;
+}
+.original-price{
+    font-size: 1rem;
+    color: #595c73;
+}
+.buy-box-item #last{
+    margin-inline-end: 0;
+    font-size: 1rem;
+}
+.discount-expirasion{
+    margin-top: -0.25rem;
+    color: #d51c0f;
+    display: flex;
+}
+.discount-expirasion .icon{
+    margin: 0.0625rem 0.25rem 0 0;
+}
+.big-btn{
+    block-size: 3rem;
+}
+.btn{
+    position: relative;
+    align-items: center;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    max-inline-size: 100%;
+    min-inline-size: 0.5rem;
+    padding-block: 0;
+    padding-inline: 0.75rem;
+    justify-content: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+.add-to-cart{
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #d64000;
+    color: #fff;
+}
+.add-to-cart:hover{
+    background-color: #ff4d00;
+}
+.buy{
+    width: 100%;
+    margin: 0.5rem 0;
+        background-color: #fff;
+        color: #d64000;
+        border: 2px solid #d64000;
+}
+.buy:hover{
+    background-color: #ffe4d1;
+}
+#course-include{
+    padding-top: 1rem;
+}
+.ci-head{
+    margin-bottom: 0.5rem;
+}
+.unstyled-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-inline-size: none;
+    padding-inline-start: 1.5rem;
+}
+.list-item{
+    padding-block: 0.25rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: start;
+    letter-spacing: normal;
+    min-block-size: 1.225rem;
+}
+.list-item-content{
+    margin-inline-start: 1rem;
+    min-block-size: 1.225rem;
+}
+#page-body{
+    padding-top: 2rem;
+    max-width: 74rem;
+    margin: 0 auto;
+}
+#page-content{
+    max-width: 43.75rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.component{
+    margin-bottom: 2rem;
+}
+#course-about{
+    border: 1px solid #d1d2e0;
+    padding: 1.5rem 0 1rem 0;
+
+}
+#course-about h2{
+    margin: 0 1.5rem 1rem 1.5rem;
+}
+#content-container{
+    margin: 0 1.5rem;
+}
+#content-container .unstyled-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#content-container li{
+    width: calc(50% - (1.5rem / 2));
+}
+#description h2{
+    margin-bottom: 1rem;
+}
+.show-more-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.show-more-content{
+    max-height: 13.8rem;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
+}
+.show-more-content.expanded {
+    max-height: none;
+}
+.fade-bottom {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    pointer-events: none;
+}
+.show-more-content.expanded .fade-bottom{
+    display: none;
+}
+#show-btn{
+    block-size: 2.5rem;
+    color: #346e4a;
+    background-color: transparent;
+    margin-inline: -0.25rem -0.25rem;
+    padding-inline: 0.25rem 0.25rem;
+    border: 0;
+}
+#show-btn:hover{
+    background-color: color-mix(in srgb, #1f453d 12%, transparent);
+}
+#instructor-bio h2{
+    margin: 0 0 1rem 0;
+}
+.heading-lg{
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: clamp(1.0625rem, calc(1.0625rem + (1.125 - 1.0625) * calc(((100vw - 22.5rem) / ( 90 - 22.5)))),1.125rem);
+}
+#instructor-bio .heading-lg{
+    margin-bottom: 0.25rem;
+}
+.subtitle{
+    color: #595c73;
+}
+.card {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    flex-direction: row;
+}
+/* Bên trái chiếm 1 phần */
+.card-left {
+    flex: 2;
+    /* 1 phần trong tổng 4 */
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Bên phải chiếm 3 phần */
+.card-right {
+    flex: 4;
+    /* 3 phần trong tổng 4 */
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-right p{
+    font-size: 15px;
+}
+/* Hình ảnh và thông tin */
+.card-left img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem; }
+#reviews .xl-heading{
+    margin-bottom: 1.5rem;
+}
+.review-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.review-container{
+    margin-right: 1rem;
+    padding: 1.5rem 0 2rem;
+    width: calc(50% - 1rem);
+    border-top: 1px solid #d1d2e0;
+}
+.rating-icon{
+    margin-right: 0.25rem;
+    color: #ffad2a;
+    font-size: 12px;
+    display: block;
+}
+.starss{
+    display: inline-flex;
+    align-items: center;
+}
+.rating .heading-xs{
+    margin-left: 0.25rem;
+    color: #595c73;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+    gap: 0.25rem;
+}
+.name-rating{
+    display: flex;
+    flex-direction: column;
+}
+.ava{
+    margin-left: 0;
+    margin-right: 1rem;
+    background: #303043;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    object-fit: cover;
+    color: #fff;
+}
+.review-heading{
+    display: flex;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+}
+.rv-content{
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1rem;
+    height: auto;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cards {
+    flex: 0 0 calc(100% / 3);
+    /* đúng 3 thẻ chia đều */
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    /* khoảng cách hai bên mỗi card */
+}
+.carousel-track>.cards:first-child {
+    padding-left: 0;
+}
+
+.carousel-track>.cards:last-child {
+    padding-right: 0; }
+.cards img{
+    aspect-ratio: calc(1 / 0.5625);
+    width: 100%;
+}
+.course-title{
+    margin-bottom: 0.25rem;
+}
+.course-title .mid-heading{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: block-axis;
+}
+.small-text{
+    font-weight: 400;
+        line-height: 1.4;
+        font-size: 0.75rem;
+}
+.course-cteator{
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #595c73;
+}
+.rating-number{
+    color: #595c73;
+    margin-left: 0.25rem;
+}
+.course-detail{
+    margin-bottom: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-rating{
+    margin-bottom: 0.25rem;
+}
+.course-rating .rating-icon{
+    font-size: 0.5rem;
+}
+.course-price{
+    margin-bottom: 0.25rem;
+    color: #2a2b3f;
+    display: flex;
+    flex-flow: row wrap;
+}
+.course-main-content{
+    color: #2a2b3f;
+}
+.nav {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+.section-title{
+    position: relative;
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+}
+.stick-arrow{
+    width: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        background-color: #F0F2F3;
+        transition: .3s;
+        cursor: pointer;
+        color: #18181D;
+}
+.prev{
+    margin-right: 0.5rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1rem 0 0;
+}
+
+.modal-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+    .sidebar {
+        position: relative !important;
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    #sidebar-position {
+        padding: 0 1rem;
+    }
+
+    #page-content,
+    #main-content {
+        margin: 0 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #product-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-left,
+    .card-right {
+        width: 100%;
+        border-right: none;
+        padding: 1rem;
+    }
+
+    .review-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .carousel-track {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .cards {
+        flex: 0 0 80%;
+    }
+
+    #top-container {
+        padding: 1rem;
+    }
+
+    #page-body {
+        padding-top: 1rem;
+    }
+
+    #link-page {
+        margin: 0 1rem 1rem;
+    }
+
+    #breadcrumb {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .xl-heading {
+        font-size: 1.25rem;
+    }
+
+    .mid-heading {
+        font-size: 1rem;
+    }
+
+    .small-heading {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .carousel-track {
+        gap: 0.5rem;
+    }
+
+    .cards {
+        flex: 0 0 90%;
+    }
+
+    .add-to-cart,
+    .buy {
+        font-size: 1rem;
+    }
+
+    #purchase-section {
+        padding: 1rem;
+    } }

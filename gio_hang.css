@@ -1,0 +1,367 @@
+/* Reset mặc định */
+body, h1, h2, h5, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+body {
+  background-color: #fff;
+  padding: 100px 20px 0px 20px;
+}
+
+.containerr {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 120px;
+}
+
+.hdd h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #212529;
+}
+
+/* Bố cục chính */
+.cart-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap; /* Đảm bảo không bị xuống dòng khi sticky */
+  overflow: visible; /* Sticky không hoạt động nếu overflow là hidden */
+}
+
+.cart-item {
+  flex: 2;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  min-width: 0;
+}
+
+.cart-item img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item p {
+  margin-top: 6px; /*  Tạo khoảng cách trên đơn giá */
+}
+
+/* Tóm tắt đơn hàng */
+.cart-summary {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  min-width: 280px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.summary-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #18794e;
+}
+
+.item-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 12px;
+  margin-top: 20px;
+}
+
+.total-price {
+  background-color: #18794e;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* Nút */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-align: center;
+  margin: 8px 4px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #212529;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #145f3e;
+}
+
+.btn-secondary {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #666;
+}
+
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+.cart-item .btn-remove {
+  position: absolute;    
+  top: 10px;             /* Cách mép trên 10px */
+  right: 10px;           /*  Cách mép phải 10px */
+  font-size: 14px;       /* Nhỏ gọn */
+  color: #e74c3c;        /* Màu đỏ cảnh báo */
+  background: none;      
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1;
+  opacity: 0.8;          /* Mờ nhẹ lúc bình thường */
+  transition: opacity 0.2s ease;
+}
+
+/* Hover cho hiệu ứng đậm và chuyển màu */
+.cart-item .btn-remove:hover {
+  opacity: 1;
+  color: #c0392b;
+}
+
+#cartList {
+  max-height: 600px;       /* Chiều cao tối đa của danh sách sản phẩm */
+  overflow-y: auto;        /* Tạo thanh cuộn khi nội dung vượt quá */
+  padding-right: 10px;     /* Khoảng đệm để tránh che nội dung bởi thanh cuộn */
+}
+
+@media (max-width: 768px) {
+.cart-item {
+  flex-direction: column;
+}
+.cart-wrapper {
+  align-items: flex-start;
+  min-width: auto;
+  margin-top: 0;
+}
+.cart-summary {
+  max-width: 100%;
+  margin-left: 0;
+  margin-top: 40px;
+}
+.recommendations-list {
+  gap: 16px;
+}
+.recommendation-item {
+  flex: 0 0 180px;
+}
+.recommendation-item img {
+  width: 180px;
+  height: 110px;
+}
+}
+@media (max-width: 678px) {
+  .cart-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .cart-items {
+    width: 100%;
+  }
+
+  .summary-header,
+  .summary-row,
+  .total-price,
+  .item-count {
+    text-align: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .cart-summary {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .summary-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .item-count {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .summary-row.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #checkoutButton,
+  .btn-secondary {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .recommendations {
+    padding: 1rem;
+  }
+
+  .recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .recommendation-item {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recommendation-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+/* Recommendations */
+.recommendations {
+  margin:auto;
+  max-width: 1200px;;
+}
+.recommendations h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.recommendations-list {
+  overflow-x: auto;
+  gap: 24px;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  display: inline-flex;
+  justify-content: center;
+}
+.recommendation-item {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.recommendation-item img {
+  width: 280px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.recommendation-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #1e293b;
+  margin: 0;
+  width: 280px; /* same width as image */
+  white-space: nowrap; /* prevent wrapping */
+  overflow: hidden; /* hide overflow text */
+  text-overflow: ellipsis; /* show ellipsis for overflow */
+}
+.recommendation-subtitle {
+  font-size: 12px;
+  color: #475569;
+  margin: 0;
+}
+/* Rating styles for recommendations: yellow stars with numeric rating and number of ratings in gray */
+.recommendation-rating {
+  display: flex; /* horizontal layout */
+  align-items: center; /* vertically center stars and text */
+  font-size: 13px; /* star and rating number size */
+  font-weight: 600; /* bold rating number */
+  color:  #fd7e14; /* yellow color for stars and rating number */
+  gap: 4px; /* spacing between rating number and stars */
+}
+.recommendation-rating span {
+  color: #475569; /* gray color for number of ratings */
+  font-weight: 400; /* normal font weight for number of ratings */
+  font-size: 12px; /* smaller font size for number of ratings */
+  margin-left: 6px; /* spacing between stars and number of ratings */
+}
+.recommendation-prices {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+.recommendation-old-price {
+  text-decoration: line-through;
+  color: #adb5bd;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+.recommendation-badge {
+  background-color: #18794e;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  user-select: none;
+  display: inline-block;
+  margin-top: 6px;
+  width: fit-content;
+}
+

@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="chi-tiet-khoa-hoc.css" />
+    <script
+      src="https://kit.fontawesome.com/de6cb0a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=release_alert"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=language"
+    />
+    <link rel="stylesheet" href="./header/header.css">
+    <link rel="stylesheet" href="./footer/footer.css">
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16;
+      }
+    </style>
+    <title>Course Info</title>
+  </head>
+  <body>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-play-overlay" viewBox="0 0 24 24">
+          <path
+            fill="#595C73"
+            d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10"
+          ></path>
+          <path
+            fill="#F6F7F9"
+            d="m10.477 16.25 5.502-3.533q.405-.258.405-.716t-.405-.717l-5.502-3.535q-.425-.291-.872-.047-.447.245-.447.764v7.068q0 .519.447.764.447.244.872-.047M12.002 24q-2.49 0-4.68-.945a12.1 12.1 0 0 1-3.811-2.564 12.1 12.1 0 0 1-2.566-3.81Q0 14.491 0 12.002t.945-4.68A12.1 12.1 0 0 1 3.509 3.51 12.1 12.1 0 0 1 7.32.945Q9.509 0 11.998 0t4.68.945q2.19.945 3.811 2.564a12.1 12.1 0 0 1 2.566 3.81Q24 9.509 24 11.998t-.945 4.68a12.1 12.1 0 0 1-2.564 3.811 12.1 12.1 0 0 1-3.81 2.566q-2.19.945-4.679.945"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <header id="header-guest" class="header">
+      <div class="header-left">
+        <a href="index.html">
+          <img src="images/Screenshot 2025-06-07 212313.png" alt="Logo"> </a> 
+        <!--Explore dropdown-->
+        <div class="mega-menu-container">
+          <a href="#" class="explore-link">Explore</a>
+          <div class="mega-menu-content">
+            <div class="mega-menu-column">
+              <h4>Explore by Goal</h4>
+              <ul>
+                <li>
+                  <a href="#">Learn AI <i class="fas fa-chevron-right"></i></a>
+                  <ul class="submenu submenu-level-2">
+                    <li><a href="#">AI Fundamentals</a></li>
+                    <li><a href="#">AI For Professionals</a></li>
+                    <li><a href="#">AI For Developers</a></li>
+                    <li><a href="#">AI For Creatives</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Launch a new career <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Certification preparation
+                    <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+              </ul>
+
+              <h4>Main Categories</h4>
+              <ul>
+                <li>
+                  <a href="#"
+                    >Development <i class="fas fa-chevron-right"></i
+                  ></a>
+                  <ul class="submenu submenu-level-2">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Development</a></li>
+                    <li><a href="#">Game Development</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="has-submenu-level-3"
+                    >Business <i class="fas fa-chevron-right"></i
+                  ></a>
+                  <ul class="submenu submenu-level-2">
+                    <li>
+                      <a href="danh_muc_khoa_hoc_Entrepreneurship"
+                        >Entrepreneurship</a
+                      >
+                    </li>
+                    <li>
+                      <a href="danh_muc_khoa_hoc_Communication"
+                        >Communication</a
+                      >
+                    </li>
+                    <li><a href="management_course.html">Management</a></li>
+                    <li><a href="sales_courses.html">Sales</a></li>
+                    <li>
+                      <a href="strategy_courses.html">Business Strategy</a>
+                    </li>
+                    <li>
+                      <a href="#" class="has-submenu-level-3"
+                        >Operations <i class="fas fa-chevron-right"></i
+                      ></a>
+                      <ul class="submenu submenu-level-3">
+                        <h4>Popular topics</h4>
+                        <li><a href="#">Supply Chain</a></li>
+                        <li>
+                          <a href="#"
+                            >Lean Six Sigma Green Belt Certification</a
+                          >
+                        </li>
+                        <li><a href="#">Logistics Management</a></li>
+                        <li>
+                          <a href="#"
+                            >Lean Six Sigma Black Belt Certification</a
+                          >
+                        </li>
+                        <li><a href="#">Quality Management</a></li>
+                        <li><a href="#">Virtual Assistant Skills</a></li>
+                        <li><a href="#">Operations Management</a></li>
+                        <li>
+                          <a href="#">Certified Quality Engineer (CQE)</a>
+                        </li>
+                        <li><a href="#">Zapier</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Project Management</a></li>
+                    <li><a href="#">Business Law</a></li>
+                    <li><a href="#">Business Analytics & Intelligence</a></li>
+                    <li><a href="#">Human Resources</a></li>
+                    <li><a href="#">Industry</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >Finance & Accounting <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    >IT & Software <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Office Productivity <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Personal Development <i class="fas fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#">Design <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li>
+                  <a href="#">Marketing <i class="fas fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="search-bar">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Search for anything" />
+        </div>
+      </div>
+
+      <div class="header-right">
+        <a href="#" class="business-link">Mindvestor Business</a>
+        <a href="#" class="teach-link">Teach on Mindvestor</a>
+        <a href="#" class="user-only">My learning</a>
+        <a href="gio_hang.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">3</span>
+        </a>
+        <button class="btn btn-login guest-only">Log in</button>
+        <button class="btn btn-signup guest-only">Sign up</button>
+        <div class="profile-wrapper user-only">
+          <div class="avatar">
+            <img
+              src="https://i.pinimg.com/736x/10/f3/ea/10f3ea84eebd2c04b0513c96191cc34d.jpg"
+              alt="User Avatar"
+            />
+          </div>
+          <div class="profile-box">
+            <h4>Name</h4>
+            <p>email</p>
+            <hr />
+            <p><a href="#">Trang cá nhân</a></p>
+            <p><a href="#">Đăng xuất</a></p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="page-container">
+      <div id="product-header">
+        <div id="product-header-content">
+          <div id="lead-lead-margin-right">
+            <div id="lead-title">
+              The Complete Presentation and Public Speaking/Speech Course
+            </div>
+            <div class="course-info">
+              <div class="best-seller heading-xs">Best seller</div>
+              <a href="#reviews" class="normal-text ratings">
+                <span class="star-rating">
+                  <span class="small-heading star-number">4.5</span>
+                  <i
+                    class="fa-solid fa-star small-icon"
+                    style="--fa: '\f005'"
+                  ></i>
+                </span>
+                <span class="link">(19,316 ratings)</span>
+              </a>
+              <span class="normal-text">232,575 students</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="top-container">
+        <div id="inner-top-container">
+          <div id="link-page">
+            <div id="breadcrumb">
+              <a class="small-heading" href="">Communication Courses</a>
+            </div>
+          </div>
+          <div id="main-content">
+            <div class="normal-text">
+              <h1 id="coures-name">
+                The Complete Presentation and Public Speaking/Speech Course
+              </h1>
+              <div id="short-description">
+                From page to stage; learn everything you need to know about
+                giving a great speech for business & personal presentations.
+              </div>
+              <div class="course-info">
+                <div class="course-info-item">
+                  <div class="best-seller heading-xs">Best seller</div>
+                </div>
+                <div class="course-info-item row-item">
+                  <a href="#reviews" class="ratings">
+                    <span class="star-rating">
+                      <span class="small-heading star-number">4.5</span>
+                      <div class="rating-icon">
+                        <i
+                          class="fa-solid fa-star icon"
+                          style="--fa: '\f005'"
+                        ></i>
+                      </div>
+                      <div class="rating-icon">
+                        <i
+                          class="fa-solid fa-star icon"
+                          style="--fa: '\f005'"
+                        ></i>
+                      </div>
+                      <div class="rating-icon">
+                        <i
+                          class="fa-solid fa-star icon"
+                          style="--fa: '\f005'"
+                        ></i>
+                      </div>
+                      <div class="rating-icon">
+                        <i
+                          class="fa-solid fa-star icon"
+                          style="--fa: '\f005'"
+                        ></i>
+                      </div>
+                      <div class="rating-icon">
+                        <i
+                          class="fa-solid fa-star-half-stroke icon"
+                          style="--fa: '\f5c0'"
+                        ></i>
+                      </div>
+                    </span>
+                    <span class="link">(19,316 ratings)</span>
+                  </a>
+                  <span>232,575 students</span>
+                </div>
+              </div>
+              <div class="course-info-item">
+                <div id="instructor">
+                  <span>
+                    <span>Created by</span>
+                    <a href="#instructor-1">
+                      <span class="link"
+                        >Chris Haroun | 1.5 Million Students | #1 Best Selling
+                        Business & Finance Prof.</span
+                      >
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div id="time-language">
+                <div class="course-info-item">
+                  <span class="info-icon">🛠</span>Last updated 5/2025
+                </div>
+                <div class="course-info-item">
+                  <span class="info-icon">🌐</span>English
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page-body">
+        <div id="page-content">
+          <div class="component">
+            <div id="course-about">
+              <h2 class="xl-heading">What you'll learn</h2>
+              <div id="content-container">
+                <ul class="unstyled-list">
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-check icon"
+                          style="--fa: '\f00c'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        #1 Best Selling Presentation Skills Course on Udemy!
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-check icon"
+                          style="--fa: '\f00c'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        Master presentation skills: from engaging body language,
+                        creating compelling content, and using templates to
+                        making stunning slides.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-check icon"
+                          style="--fa: '\f00c'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        Boost confidence, answer tough questions, and impress
+                        any audience with 25+ guides and smart preparation
+                        strategies.
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-check icon"
+                          style="--fa: '\f00c'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        Learn secrets from pros on appearance, delivery, and
+                        post-presentation success. More details in the full
+                        course outline.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="component normal-text">
+            <div id="description">
+              <h2 class="xl-heading">Description</h2>
+              <div class="show-more-container">
+                <div class="show-more-content" id="des">
+                  <p>
+                    <strong
+                      >The COMPLETE Presentation and Public Speaking/Speech
+                      Course</strong
+                    >
+                    is Udemy’s #1 best-selling course in presentation skills,
+                    created by award-winning professor, TEDx speaker, author,
+                    and entrepreneur Chris Haroun. This comprehensive 16-hour
+                    course is designed to take you from “page to stage,”
+                    teaching you <em>everything</em> you need to know to become
+                    a confident and impactful public speaker. It includes 12
+                    structured parts (called “Acts”) covering audience analysis,
+                    defining purpose, structuring content, designing effective
+                    slides, building confidence, mastering delivery, handling
+                    Q&A sessions, preparation, appearance tips,
+                    post-presentation actions, access to 25 detailed speech
+                    guides, and over 50 slide templates.
+                  </p>
+                  <p>
+                    This course is based entirely on Chris’s 25+ years of
+                    real-world experience delivering keynotes, TEDx talks,
+                    lectures at top universities, wedding toasts, investor
+                    pitches, business speeches, and more. You can follow the
+                    course in sequence, skip ahead when prompted, or focus only
+                    on the sections you need. Students consistently praise the
+                    course for its depth, passion, and practical insights.
+                    Whether you're a beginner or looking to sharpen your skills,
+                    this course will help you enjoy and master public speaking.
+                    Backed by a 30-day money-back guarantee.
+                  </p>
+                  <div class="fade-bottom"></div>
+                </div>
+                <button type="button" class="btn small-heading" id="show-btn">
+                  Show more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="component normal-text">
+            <div id="instructor-bio">
+              <h2 class="xl-heading">Instructors</h2>
+              <div class="card" id="instructor-1">
+                <div class="card-left">
+                  <img
+                    src="https://img-c.udemycdn.com/user/200_H/14942868_3ed6_38.jpg"
+                    alt="Chris Haroun | 1.5 Million Students | #1 Best Selling Business & Finance Prof."
+                  />
+                  <h3 class="heading-lg">
+                    Chris Haroun | 1.5 Million Students | #1 Best Selling
+                    Business & Finance Prof.
+                  </h3>
+                  <div class="subtitle">
+                    Finance, Business, AI, Excel and Public Speaking Courses
+                  </div>
+                  <ul class="unstyled-list">
+                    <li>
+                      <div class="list-item normal-text">
+                        <div class="small-icon">
+                          <i
+                            class="fa-solid fa-star icon"
+                            style="--fa: '\f005'"
+                          ></i>
+                        </div>
+                        <div class="list-item-content">
+                          4.6 Instructor Rating
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-item normal-text">
+                        <div class="small-icon">
+                          <i
+                            class="fa-solid fa-award icon"
+                            style="--fa: '\f559'"
+                          ></i>
+                        </div>
+                        <div class="list-item-content">274,712 Reviews</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-item normal-text">
+                        <div class="small-icon">
+                          <i
+                            class="fa-solid fa-user-group icon"
+                            style="--fa: '\f500'"
+                          ></i>
+                        </div>
+                        <div class="list-item-content">1,639,379 Students</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list-item normal-text">
+                        <div class="small-icon">
+                          <i
+                            class="fa-solid fa-circle-play icon"
+                            style="--fa: '\f144'"
+                          ></i>
+                        </div>
+                        <div class="list-item-content">80 Courses</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-right">
+                  <p>
+                    <strong>Chris Haroun</strong> is an award-winning business
+                    professor, entrepreneur, author, venture capitalist, and the
+                    founder &amp; CEO of the 300+ hour Haroun MBA Degree
+                    Program®. He holds an MBA from Columbia University and has
+                    an impressive track record, having previously worked at
+                    leading global firms such as Goldman Sachs, Citadel, and
+                    Accenture. Over the course of his career, Chris has raised
+                    and managed over $1 billion across various financial and
+                    business ventures. He has founded multiple successful
+                    companies, including an investment firm that invested in
+                    Facebook years before its IPO.
+                  </p>
+                  <p>
+                    Chris’s bestselling online business and self-improvement
+                    courses have impacted over 2 million students in 196
+                    countries and are available in 12 languages. His practical,
+                    experience-based approach to business education has earned
+                    widespread acclaim and media coverage in major outlets such
+                    as <em>Forbes</em>, <em>CNN</em>, <em>NBC</em>,
+                    <em>Business Insider</em>, and <em>Entrepreneur</em>. He is
+                    the creator of the #1 best-selling business course “An
+                    Entire MBA in 1 Course®” and the author of the bestselling
+                    book “101 Crucial Lessons They Don’t Teach You in Business
+                    School®,” which Forbes named “1 of 6 books that all
+                    entrepreneurs must read right now.”
+                  </p>
+                  <p>
+                    In addition to teaching, Chris is a passionate advocate for
+                    education and mentorship. He frequently guest lectures at
+                    top-tier institutions like Berkeley and Stanford and is a
+                    Dobson Fellow at McGill University, where he earned his
+                    undergraduate degree in Management Information Systems and
+                    International Business. He actively gives back through
+                    global scholarships and is committed to building schools in
+                    Rwanda and other underserved regions. Chris lives in
+                    Hillsborough, California with his wife Christine and their
+                    three sons—Andrew, Matthew, and Dylan. His life philosophy
+                    is rooted in service and impact, and he lives by the quote:
+                    “<em
+                      >Don’t expect to accomplish your dreams in life unless you
+                      help others accomplish theirs first.</em
+                    >”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component">
+            <div id="reviews">
+              <h2 class="xl-heading">Reviews</h2>
+              <div class="review-content">
+                <div class="review-container">
+                  <div class="review-heading">
+                    <div
+                      class="ava mid-heading"
+                      style="width: 3rem; height: 3rem"
+                    >
+                      SL
+                    </div>
+                    <div class="name-rating">
+                      <p class="mid-heading">Sophie L.</p>
+                      <div class="rating">
+                        <div class="starss">
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                        </div>
+                        <span class="heading-xs">a month ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rv-content">
+                    This course is content-rich and occasionally repetitive, but
+                    overall very helpful. The video examples on the instructor’s
+                    website were especially useful. Some videos (like 74 and 75)
+                    were unavailable, but the course still reflects Chris
+                    Haroun’s dedication and is well worth taking.
+                  </div>
+                </div>
+                <div class="review-container">
+                  <div class="review-heading">
+                    <div
+                      class="ava mid-heading"
+                      style="width: 3rem; height: 3rem"
+                    >
+                      JO
+                    </div>
+                    <div class="name-rating">
+                      <p class="mid-heading">James O.</p>
+                      <div class="rating">
+                        <div class="starss">
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-regular fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                        </div>
+                        <span class="heading-xs">2 months ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rv-content">
+                    All is relevant content and helpful but some of the
+                    presentation prep to me is non-applicable for what I need to
+                    develop. More I want to focus on the speaking/speech aspect
+                    of the course.
+                  </div>
+                </div>
+                <div class="review-container">
+                  <div class="review-heading">
+                    <div
+                      class="ava mid-heading"
+                      style="width: 3rem; height: 3rem"
+                    >
+                      MO
+                    </div>
+                    <div class="name-rating">
+                      <p class="mid-heading">Mohit</p>
+                      <div class="rating">
+                        <div class="starss">
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                        </div>
+                        <span class="heading-xs">3 months ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rv-content">
+                    Wonderful course on Public Speaking , but now outdated , its
+                    content is from 15 years back, need to make it according to
+                    recent time, but value for money, really useful one
+                  </div>
+                </div>
+                <div class="review-container">
+                  <div class="review-heading">
+                    <div
+                      class="ava mid-heading"
+                      style="width: 3rem; height: 3rem"
+                    >
+                      JS
+                    </div>
+                    <div class="name-rating">
+                      <p class="mid-heading">John S.</p>
+                      <div class="rating">
+                        <div class="starss">
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                          <div class="rating-icon">
+                            <i
+                              class="fa-solid fa-star icon"
+                              style="--fa: '\f005'"
+                            ></i>
+                          </div>
+                        </div>
+                        <span class="heading-xs">4 months ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rv-content">
+                    Great, I am learning a lot, new acronym PIMCO to guide my
+                    presentations design
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component">
+            <div id="also-buy">
+              <div class="section-title">
+                <h2 class="xl-heading">Students also bought</h2>
+                <div class="arrow stick-arrow">
+                  <button class="nav prev">&#10094;</button>
+                  <button class="nav next">&#10095;</button>
+                </div>
+              </div>
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <div class="cards">
+                    <a href="">
+                      <img
+                        src="image/sales1.jpg"
+                        alt=""
+                        srcset="image/sales1.jpg 1x, image/sales1.jpg 2x"
+                      />
+                      <div class="course-main-content">
+                        <div class="course-title">
+                          <h3 class="mid-heading">
+                            The Complete Sales Skills Master Class - Sales
+                            Marketing B2B
+                          </h3>
+                        </div>
+                        <div class="course-cteator small-text">
+                          TJ Walker, Bob Berkowiz
+                        </div>
+                        <div class="course-rating">
+                          <span class="star-rating">
+                            <span class="small-heading star-number">4.6</span>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star-half-stroke icon"
+                                style="--fa: '\f5c0'"
+                              ></i>
+                            </div>
+                          </span>
+                          <span class="small-text rating-number">(61,764)</span>
+                        </div>
+                        <div class="course-detail small-text">
+                          <span>3.5 total hours</span>
+                          <span>*</span>
+                          <span>18 lectures</span>
+                          <span>*</span>
+                          <span>All Levels</span>
+                        </div>
+                        <div class="course-price">
+                          <div class="buy-box-price mid-heading">
+                            <span>₫279,000</span>
+                          </div>
+                          <div class="buy-box-price original-price normal-text">
+                            <s>₫1,019,000</s>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cards">
+                    <a href="">
+                      <img
+                        src="image/management1.jpg"
+                        alt=""
+                        srcset="
+                          image/management1.jpg 1x,
+                          image/management1.jpg 2x
+                        "
+                      />
+                      <div class="course-main-content">
+                        <div class="course-title">
+                          <h3 class="mid-heading">
+                            Become a Product Manager | Learn the Skills & Get
+                            the Job
+                          </h3>
+                        </div>
+                        <div class="course-cteator small-text">
+                          Cole Mercer, Evan Kimbrell
+                        </div>
+                        <div class="course-rating">
+                          <span class="star-rating">
+                            <span class="small-heading star-number">4.3</span>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star-half-stroke icon"
+                                style="--fa: '\f5c0'"
+                              ></i>
+                            </div>
+                          </span>
+                          <span class="small-text rating-number">(61,764)</span>
+                        </div>
+                        <div class="course-detail small-text">
+                          <span>3 total hours</span>
+                          <span>*</span>
+                          <span>13 lectures</span>
+                          <span>*</span>
+                          <span>All Levels</span>
+                        </div>
+                        <div class="course-price">
+                          <div class="buy-box-price mid-heading">
+                            <span>₫429,000</span>
+                          </div>
+                          <div class="buy-box-price original-price normal-text">
+                            <s>₫2,359,000</s>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cards">
+                    <a href="">
+                      <img
+                        src="image/management2.jpg"
+                        alt=""
+                        srcset="
+                          image/management2.jpg 1x,
+                          image/management2.jpg 2x
+                        "
+                      />
+                      <div class="course-main-content">
+                        <div class="course-title">
+                          <h3 class="mid-heading">
+                            Master the Product Management Interview - A Complete
+                            Guide
+                          </h3>
+                        </div>
+                        <div class="course-cteator small-text">Chales Du</div>
+                        <div class="course-rating">
+                          <span class="star-rating">
+                            <span class="small-heading star-number">4.4</span>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star-half-stroke icon"
+                                style="--fa: '\f5c0'"
+                              ></i>
+                            </div>
+                          </span>
+                          <span class="small-text rating-number">(2.472)</span>
+                        </div>
+                        <div class="course-detail small-text">
+                          <span>2.5 total hours</span>
+                          <span>*</span>
+                          <span>10 lectures</span>
+                          <span>*</span>
+                          <span>All Levels</span>
+                        </div>
+                        <div class="course-price">
+                          <div class="buy-box-price mid-heading">
+                            <span>₫349,000</span>
+                          </div>
+                          <div class="buy-box-price original-price normal-text">
+                            <s>₫469,000</s>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cards">
+                    <a href="">
+                      <img
+                        src="image/sales3.jpg"
+                        alt=""
+                        srcset="image/sales3.jpg 1x, image/sales3.jpg 2x"
+                      />
+                      <div class="course-main-content">
+                        <div class="course-title">
+                          <h3 class="mid-heading">
+                            Email Marketing with Dekker: Cold Email Marketing &
+                            More!
+                          </h3>
+                        </div>
+                        <div class="course-cteator small-text">
+                          Prof. Paul Cline, Ed.D, Sandor Kiss
+                        </div>
+                        <div class="course-rating">
+                          <span class="star-rating">
+                            <span class="small-heading star-number">4.4</span>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-regular fa-star icon"
+                                style="--fa: '\f5c0'"
+                              ></i>
+                            </div>
+                          </span>
+                          <span class="small-text rating-number">(2,472)</span>
+                        </div>
+                        <div class="course-detail small-text">
+                          <span>2 total hours</span>
+                          <span>*</span>
+                          <span>12 lectures</span>
+                          <span>*</span>
+                          <span>All Levels</span>
+                        </div>
+                        <div class="course-price">
+                          <div class="buy-box-price mid-heading">
+                            <span>₫399,000</span>
+                          </div>
+                          <div class="buy-box-price original-price normal-text">
+                            <s>₫699,000</s>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cards">
+                    <a href="">
+                      <img
+                        src="image/communication2.jpg"
+                        alt=""
+                        srcset="
+                          image/communication2.jpg 1x,
+                          image/communication2.jpg 2x
+                        "
+                      />
+                      <div class="course-main-content">
+                        <div class="course-title">
+                          <h3 class="mid-heading">
+                            Write Better Emails: Tactics for Smarter Team
+                            Communication
+                          </h3>
+                        </div>
+                        <div class="course-cteator small-text">
+                          Hassan Osman
+                        </div>
+                        <div class="course-rating">
+                          <span class="star-rating">
+                            <span class="small-heading star-number">4.6</span>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star icon"
+                                style="--fa: '\f005'"
+                              ></i>
+                            </div>
+                            <div class="rating-icon">
+                              <i
+                                class="fa-solid fa-star-half-stroke icon"
+                                style="--fa: '\f5c0'"
+                              ></i>
+                            </div>
+                          </span>
+                          <span class="small-text rating-number">(87,371)</span>
+                        </div>
+                        <div class="course-detail small-text">
+                          <span>2.5 total hours</span>
+                          <span>*</span>
+                          <span>15 lectures</span>
+                          <span>*</span>
+                          <span>All Levels</span>
+                        </div>
+                        <div class="course-price">
+                          <div class="buy-box-price mid-heading">
+                            <span>₫409,000</span>
+                          </div>
+                          <div class="buy-box-price original-price normal-text">
+                            <s>₫1,399,000</s>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar-position">
+        <div class="sidebar">
+          <div class="sidebar-container">
+            <div class="video-intro">
+              <button id="play-video">
+                <span id="vid-img">
+                  <img
+                    src="image/communication1.jpg"
+                    srcset="
+                      image/communication1.jpg 240w,
+                      image/communication1.jpg 480w,
+                      image/communication1.jpg 750w
+                    "
+                    alt=""
+                    style="background-size: cover"
+                    sizes="(min-width: 1080px) 240px, (min-width: 27.4rem) 600px, 100vw"
+                    width="240"
+                    height="135"
+                    loading="eager"
+                  />
+                </span>
+                <span id="darken-bgr"></span>
+                <span id="play-icon">
+                  <svg aria-hidden="true" focusable="false" class="icon">
+                    <use xlink:href="#icon-play-overlay"></use>
+                  </svg>
+                </span>
+                <span class="overlay-text mid-heading"
+                  >Preview this course</span
+                >
+              </button>
+            </div>
+            <div id="purchase-section">
+              <div id="buy-box">
+                <div class="buy-box-item">
+                  <div id="price">
+                    <div class="buy-box-price xl-heading">
+                      <span>₫1,639,000</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="buy-box-item">
+                  <button
+                    type="button"
+                    class="add-to-cart big-btn btn mid-heading"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+                <div class="buy-box-item">
+                  <button type="button" class="buy big-btn btn mid-heading">
+                    Buy now
+                  </button>
+                </div>
+              </div>
+              <div id="course-include">
+                <h2 class="mid-heading ci-head">This coursse includes</h2>
+                <ul class="unstyled-list">
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-regular fa-file-video icon"
+                          style="--fa: '\f1c8'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        16 hours on-demand video
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-regular fa-file-lines icon"
+                          style="--fa: '\f15c'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">31 articles</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-infinity icon"
+                          style="--fa: '\f534'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">Full lifetime access</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list-item normal-text">
+                      <div class="small-icon">
+                        <i
+                          class="fa-solid fa-certificate icon"
+                          style="--fa: '\f0a3'"
+                        ></i>
+                      </div>
+                      <div class="list-item-content">
+                        Certificate of completion
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="video-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 class="modal-title">Course Preview</h2>
+        <p class="modal-subtitle">
+          The Complete Presentation and Public Speaking/Speech Course
+        </p>
+        <video id="preview-video" controls>
+          <source
+            src="https://cdn.pixabay.com/video/2019/03/21/22193-326722745_large.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <footer class=" footer py-4">   
+        <div class="container my-4 text-center">
+            <h5 >Subscribe to Our Newsletter</h5>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-primary" >Subscribe</button>
+            </form>
+        </div>
+        <div class="container">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 mb-4"> 
+                <h5 >About us</h5> 
+                <ul class="list-unstyled"> 
+                    <li><a href="#" class=" text-decoration-none">Our Story</a></li>
+                    <li><a href="#" class=" text-decoration-none">Our Team</a></li>
+                    <li><a href="#" class=" text-decoration-none">Careers</a></li>
+                    <li><a href="#" class=" text-decoration-none">Press</a></li>
+                    <li><a href="#" class="text-decoration-none">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="  text-decoration-none">Accessibility Statement</a></li>
+                    <li><a href="#" class="  text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="  text-decoration-none">Terms of Service</a></li>
+                    <li><a href="#" class="  text-decoration-none">Cookie Policy</a></li>
+                    <li><a href="#" class="  text-decoration-none">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <h5 >Social</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="  text-decoration-none"><i class="fab fa-facebook-f me-2"></i>  Facebook</a></li> 
+                    <li class="mb-2"><a href="#" class="  text-decoration-none"><i class="fab fa-twitter me-2"></i> Twitter</a></li>
+                    <li class="mb-2"><a href="#" class="  text-decoration-none"><i class="fab fa-instagram me-2"></i> Instagram</a></li>
+                    <li class="mb-2"><a href="#" class="  text-decoration-none"><i class="fab fa-linkedin-in me-2"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <h5 >Mobile</h5>
+                <div class="d-flex flex-column gap-3">
+                        <a href="URL_APP_STORE_CUA_BAN" target="_blank" class="d-block mb-3">
+                            <img src="app_store.svg" alt="Tải trên App Store" class="img-fluid" style="width: 170px;">
+                        </a>
+                        <a href="URL_GOOGLE_PLAY_CUA_BAN" target="_blank" class="d-block">
+                            <img src="google_play.svg" alt="Get it on Google Play" class="img-fluid" style="width: 170px;">
+                        </a>
+                </div>
+            </div>
+            
+    <div class="bottom container ">
+        <p>&copy; 2025 Mindvestor. All rights reserved.</p>
+        
+    </div>
+    </footer>
+    <script src="chi-tiet-khoa-hoc.js"></script>
+    <script>
+      let lastScrollY = window.scrollY;
+      const header = document.querySelector(".header");
+      let scrollTimeout; // Biến để lưu trữ timeout
+    
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+    
+        // Xóa timeout hiện có mỗi khi cuộn để reset bộ đếm ẩn header
+        clearTimeout(scrollTimeout);
+    
+        if (currentScrollY < lastScrollY) {
+          // Kéo lên: Header luôn hiển thị ngay lập tức
+          header.style.top = "0";
+        } else {
+          // Kéo xuống: Header vẫn hiển thị trong khi đang cuộn
+          // Đặt timeout để ẩn header sau 2 giây nếu dừng cuộn
+          scrollTimeout = setTimeout(() => {
+            // Chỉ ẩn header nếu đã cuộn xuống đủ xa (ví dụ > 100px)
+            // và đang không ở vị trí đầu trang.
+            if (window.scrollY > 100) {
+              header.style.top = "-100px"; // Đảm bảo giá trị này đủ để ẩn hoàn toàn header
+            }
+          }, 2000); // 2000ms = 2 giây
+        }
+    
+        lastScrollY = currentScrollY;
+      });
+    
+      // Đảm bảo header hiển thị khi trang được tải lần đầu
+      window.addEventListener("load", () => {
+        header.style.top = "0";
+      });
+    </script>
+    <!--Megamenu-->
+    
+      <!--Megamenu-->
+    <script>
+      const megaContainer = document.querySelector(".mega-menu-container");
+    
+      let hoverTimeout;
+    
+      megaContainer.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimeout);
+        megaContainer.classList.add("active");
+      });
+    
+      megaContainer.addEventListener("mouseleave", () => {
+        hoverTimeout = setTimeout(() => {
+          megaContainer.classList.remove("active");
+        }, 200); // 200ms để user rê chuột xuống không bị tắt ngay
+      });
+    </script>
+    
+    <!--header đăng nhập-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    
+        document.querySelectorAll(".guest-only").forEach(el => {
+          el.style.display = isLoggedIn ? "none" : "inline-block";
+        });
+    
+        document.querySelectorAll(".user-only").forEach(el => {
+          el.style.display = isLoggedIn ? "inline-block" : "none";
+        });
+      });
+    </script>
+    <!--Dang xuat-->
+    <script>
+    function handleLogout() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "index.html"; // Reload lại trang chính với header cho khách
+      }
+    </script>
+      </body>
+    </html>
+    

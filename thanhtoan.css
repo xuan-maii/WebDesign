@@ -1,0 +1,170 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding-top :60px ;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h4 {
+  color: #212529;
+  margin-bottom: 20px;
+}
+
+/* Tổng thể layout container */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Cột trái: Check Out */
+.checkout-container {
+  flex: 0 0 60%;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Cột phải: Order Summary */
+.cart-summary {
+  flex: 0 0 35%;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.summary-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.item-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 12px;
+  margin-top: 20px;
+}
+
+.total-price {
+  background-color: #18794e;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #18794e;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.andro_btn-custom {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color:#212529;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.andro_btn-custom:hover {
+  background-color: #145f3e;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.andro_subheader {
+  padding: 40px 0;
+  background: linear-gradient(to right, #18794e, #249a6c, #4adfa3);
+  color: white;
+  text-align: center;
+}
+
+.andro_subheader h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+/* Responsive mobile (stack dọc) */
+@media (max-width: 768px) {
+  .checkout-wrapper {
+    flex-direction: column;
+  }
+
+  .checkout-container,
+  .cart-summary {
+    flex: 1 1 100%;
+  }
+}

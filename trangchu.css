@@ -1,0 +1,854 @@
+main{
+  padding-top: 60px;
+}
+ul {
+    list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+    padding: 0; /* Loại bỏ khoảng cách padding */
+    margin: 0; /* Loại bỏ khoảng cách margin */
+}
+
+/* Thiết lập cơ bản cho khung hình ảnh*/
+.hero-section h1{
+  color: hsl(186.98 100% 8.43%);
+  font-weight: bold;
+  font-size: 45px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.hero-section p{
+  font-size: 16px;
+  
+}
+.hero-section h5{
+  color:rgba(243, 127, 11, 0.893);
+  font-weight: bold;
+}
+
+.btn-get-started {
+    background-color: rgba(243, 127, 11, 0.893); /* Màu cam nổi bật (Orange) */
+    color: white;
+    padding: 15px 35px; /* Tăng padding để nút lớn hơn */
+    border: none;
+    border-radius: 8px; /* Bo tròn góc nhẹ */
+    font-size: 1.1em; /* Kích thước chữ */
+    font-weight: 600;
+    text-decoration: none; /* Bỏ gạch chân cho link */
+    display: inline-block; /* Để button có thể xếp cạnh nhau nếu có nút khác */
+    margin-top: 30px; /* Khoảng cách từ nội dung phía trên */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển động mượt mà */
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); /* Thêm bóng nhẹ */
+}
+
+.btn-get-started:hover {
+    background-color: #FF8C00; /* Màu cam đậm hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng hơi nhấc lên khi hover */
+}
+.benefits-section {
+    max-width: 900px;
+    margin: 60px auto; /* Khoảng cách trên dưới, căn giữa */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.benefits-section .section-title {
+    font-size: 2.2em;
+    color: rgba(243, 127, 11, 0.893);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.benefits-list {
+    list-style: none; /* Bỏ dấu đầu dòng mặc định */
+    padding: 0;
+    margin: 0;
+    display: grid; /* Sử dụng Grid để sắp xếp các mục */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2-3 cột trên desktop */
+    gap: 30px; /* Khoảng cách giữa các mục */
+}
+
+.benefits-list li {
+    display: flex; /* Sử dụng Flexbox cho từng mục */
+    align-items: flex-start; /* Căn icon và text trên cùng */
+    text-align: left; /* Căn lề trái nội dung text */
+    padding: 20px;
+    background-color: #fcfdff; /* Nền nhẹ cho từng item */
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.benefits-list li i {
+    font-size: 2.5em; /* Kích thước icon */
+    color: hsl(186.98 100% 8.43%); /* Màu icon */
+    margin-right: 20px;
+    flex-shrink: 0; /* Đảm bảo icon không bị co lại */
+}
+.benefits-list li h4 {
+    font-size: 1.3em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.benefits-list li p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive cho phần Benefits */
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 30px 15px;
+        margin: 40px auto;
+    }
+
+    .benefits-section .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr; /* 1 cột trên mobile */
+    }
+
+    .benefits-list li {
+        flex-direction: column; /* Xếp icon và text chồng lên nhau */
+        align-items: center; /* Căn giữa nội dung */
+        text-align: center; /* Căn giữa text */
+    }
+
+    .benefits-list li i {
+        margin-right: 0;
+        margin-bottom: 15px; /* Khoảng cách giữa icon và text */
+    }
+}
+
+.hero-picture  {
+    height: 600px; /* Đặt chiều cao cố định cho khung hiển thị */
+    overflow: hidden; /* Ẩn nội dung tràn ra ngoài khung */
+    position: relative; /* Cần thiết cho các phần tử con được định vị tương đối */
+    border-radius: 0.25rem; /* Tùy chọn: bo góc khung ngoài */
+    mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent); /* Hỗ trợ trình duyệt Webkit */
+}
+
+/* Container chứa tất cả các item sẽ cuộn */
+.slider-first {
+    display: flex;
+    flex-direction: column; /* Xếp các item theo chiều dọc */
+    animation: scroll-vertical 20s linear infinite; /* Áp dụng animation */
+   
+}
+.slider-second {
+    display: flex;
+    flex-direction: column; /* Xếp các item theo chiều dọc */
+    animation: scroll-vertical 20s linear infinite; /* Áp dụng animation */
+    animation-delay: -4s;
+}
+    
+/* Mỗi item trong cuộn */
+.slider > li {
+    flex-shrink: 0; /* Ngăn các item co lại */
+}
+
+.slider img {
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng của item */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+    padding: 5px; /* Khoảng cách giữa ảnh và viền item */
+    border-radius: 10px; /* Bo góc ảnh */
+}
+
+/* Keyframes cho hiệu ứng cuộn dọc */
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    100% {
+        transform: translateY(-50%); /* Di chuyển lên hết chiều cao của .vertical-scroll-content */
+    }
+}
+
+/* Điều chỉnh tốc độ animation khi hover (tùy chọn) */
+.slider:hover {
+    animation-play-state: paused; /* Dừng cuộn khi di chuột vào */
+}
+
+/*Thiết lập cho Career ACcelerators*/
+/* ================================================================= */
+/* SECTION: Career Accelerators */
+/* ================================================================= */
+.Career-Accelerators {
+    padding: 60px 0; /* Khoảng cách trên và dưới cho section */
+    text-align: center; /* Căn giữa tiêu đề và đoạn văn bản */
+    background-color: #f8f9fa; /* Màu nền nhẹ cho section */
+}
+
+.Career-Accelerators h2 {
+    font-size: 2.5rem; /* Kích thước tiêu đề lớn */
+    font-weight: 700; /* Đậm hơn */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    color: #343a40; /* Màu chữ tiêu đề */
+}
+
+.Career-Accelerators p {
+    font-size: 1.15rem; /* Kích thước chữ đoạn văn bản */
+    color: #6c757d; /* Màu chữ đoạn văn bản */
+    max-width: 800px; /* Giới hạn chiều rộng của đoạn văn bản */
+    margin: 0 auto 40px auto; /* Căn giữa và tạo khoảng cách dưới */
+    line-height: 1.6; /* Chiều cao dòng */
+}
+
+/* CARD STYLES */
+.Career-Accelerators .card {
+    border: none; /* Bỏ border mặc định của card */
+    border-radius: 10px; /* Bo góc card */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ cho card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà khi hover */
+    margin-bottom: 30px; /* Khoảng cách dưới mỗi card (quan trọng cho responsive) */
+    overflow: hidden; /* Đảm bảo ảnh bo góc theo card */
+    cursor: pointer;
+}
+
+.Career-Accelerators .card:hover {
+    transform: translateY(-5px); /* Nâng card lên nhẹ khi hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12); /* Đổ bóng rõ hơn khi hover */
+}
+
+.Career-Accelerators .card-img-top {
+    border-top-left-radius: 10px; /* Bo góc ảnh trên cùng theo card */
+    border-top-right-radius: 10px;
+    height: 200px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng */
+}
+
+.Career-Accelerators .card-body {
+    padding: 25px; /* Padding bên trong card body */
+    text-align: left; /* Căn trái nội dung trong card */
+    min-height: 150px; 
+}
+
+.Career-Accelerators .card-title {
+    font-size: 18px; /* Kích thước tiêu đề card */
+    font-weight: 600; /* Đậm hơn */
+    margin: 10px; /* Khoảng cách dưới tiêu đề card */
+    color: #007bff; /* Màu xanh nổi bật (hoặc màu thương hiệu của bạn) */
+}
+
+.Career-Accelerators .card-text {
+    font-size: 14px; /* Kích thước chữ văn bản card */
+    color: #495057; /* Màu chữ văn bản card */
+    line-height: 1.5; /* Chiều cao dòng */
+    text-align: justify; /* Căn đều hai bên cho văn bản */
+    margin: 10px;
+}
+
+#btnSeeAll{
+    display: inline-block; /* Hiển thị dưới dạng khối nội tuyến */
+    width : 500px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 20px; /* Padding cho nút */
+    font-size: 1rem; /* Kích thước chữ nút */
+    color: #d73625; /* Màu chữ trắng */
+    border: 2px solid #d9751e; /* Viền nút */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    border-radius: 5px; /* Bo góc nút */
+    text-decoration: none; /* Bỏ gạch chân */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.Career-Accelerators #btnSeeAll:hover {
+    background-color: #d9751e; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+.card-infor{
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    margin: 20px; /* Khoảng cách giữa các phần tử */
+    padding : 20px; /* Padding bên trong card */
+    align-items: center; /* Căn giữa theo chiều dọc */  
+}
+.Career-Accelerators .card-infor span{
+    font-size: 14px; /* Kích thước chữ cho span */
+    font-weight: 500; /* Độ đậm chữ cho span */
+    background-color: #ffffff; /* Màu nền cho span */
+    border-radius: 5px; /* Bo góc cho span */
+
+    color: #6c757d; /* Màu chữ cho span */
+    border : 1px solid #cfe6fa; /* Viền cho span */
+    padding: 5px 5px; /* Padding cho span */
+}
+
+/* Đối với màn hình nhỏ hơn 768px (col-md-4 sẽ xếp chồng) */
+@media (max-width: 767.98px) {
+    .Career-Accelerators h2 {
+        font-size: 2rem; /* Giảm kích thước tiêu đề trên màn hình nhỏ */
+    }
+
+    .Career-Accelerators p {
+        font-size: 1rem; /* Giảm kích thước đoạn văn bản trên màn hình nhỏ */
+    }
+}
+
+
+/* ================================================================= */
+/* SECTION: Career Accelerators End */
+/* ================================================================= */
+
+/* ================================================================= */
+/* SECTION: Skill nữa còn lâu mới foooter aaa bực cả mình */
+/* ================================================================= */
+.category-btn {
+  display: inline-flex;             /* cho icon và text nằm ngang */
+  align-items: center;              /* căn giữa theo chiều dọc */
+  padding: 0.5rem 1.25rem;          /* khoảng cách bên trong */
+  background-color: #ffffff;        /* màu nền button (xanh bootstrap) */
+  color: #000;                     /* màu chữ */
+  text-decoration: none;            /* bỏ gạch chân link */
+  border-radius: 0.375rem;  
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+border-radius: 5px;
+border : 1px solid #fe6b16;                  /* bỏ viền */
+}
+
+.category-btn i {
+  margin-right: 0.5rem;             /* khoảng cách icon và chữ */
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.category-btn:hover,
+.category-btn:focus {
+  background-color: #f6691e;        /* màu nền khi hover/focus */
+  color: #ffffff;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Optional: hiệu ứng khi click */
+.category-btn:active {
+  background-color: #ec3413;
+}
+.Skill{
+  padding : 60px 20px;
+}
+.Skill h2{
+    font-size: 2.5rem; /* Kích thước tiêu đề lớn */
+    font-weight: 800; /* Đậm hơn */
+    margin-bottom: 40px; /* Khoảng cách dưới tiêu đề */
+    margin-top: 20px; /* Khoảng cách trên tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+    color: hsl(186.98 100% 8.43%) /* Màu chữ tiêu đề */
+}
+.skill-list{
+  padding-top:40px;
+}
+
+/* What other say about us*/
+.what-other-say-about-us {
+    background-color: hsl(186.98 100% 8.43%); /* Màu nền nhẹ cho section */
+    padding: 60px 0; /* Khoảng cách trên và dưới cho section */
+    text-align: left; /* Căn giữa nội dung */
+}
+.what-other-say-about-us .container
+{
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 20px; /* Khoảng cách bên trong container */
+}
+.what-other-say-about-us .card {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    height: 250px !important;
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+    padding: 10px; /* Padding bên trong card */
+    border-radius: 10px; /* Bo góc card */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho card */
+    background-color: #ffffff; /* Màu nền nhẹ cho card */
+}
+.author-info {
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    }
+.author-info img {
+    width: 50px; /* Chiều rộng ảnh đại diện */
+    height: 50px; /* Chiều cao ảnh đại diện */
+    border-radius: 50%; /* Bo tròn ảnh đại diện */
+    margin-right: 15px; /* Khoảng cách bên phải cho ảnh đại diện */
+    margin-left: 15px; /* Khoảng cách bên trái cho ảnh đại diện */
+}
+.author-info .name {
+    font-weight: bold; /* Đậm tên tác giả */
+    color: #333; /* Màu chữ tên tác giả */
+    margin-top: 15px; /* Khoảng cách bên phải cho tên tác giả */
+    font-size: 15px; /* Kích thước chữ tên tác giả */
+}
+.author-info .position {
+    color: #777; /* Màu chữ vị trí tác giả */
+    font-size: 10px; /* Kích thước chữ vị trí tác giả */
+}
+.what-other-say-about-us .card-body {
+    font-size: 14px; /* Kích thước chữ cho nội dung */
+    color: #555; /* Màu chữ nội dung */
+    line-height: 1.5; /* Chiều cao dòng */
+    text-align: justify; /* Căn đều hai bên cho văn bản */
+    margin: 0px; /* Khoảng cách bên trong card body */
+    padding: 0 15px 5px 15px;
+}
+.what-other-say-about-us  .quote-icon {
+    
+    margin-bottom: 10px; /* Khoảng cách dưới cho trích dẫn */
+}
+.what-other-say-about-us .card:hover {
+    transform: translateY(-5px); /* Nâng card lên nhẹ khi hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12); /* Đổ bóng rõ hơn khi hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà khi hover */
+    background-color: #f0f2f4;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* Tùy chỉnh nền nút */
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  left: -50px; /* Đẩy ra ngoài trái */
+}
+
+.carousel-control-next {
+  right: -50px; /* Đẩy ra ngoài phải */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 70% 70%; /* Thu nhỏ biểu tượng cho gọn */
+}
+
+.carousel-indicators{
+    position: absolute;
+    bottom: -20px; /* Đặt chỉ báo ở dưới cùng */
+    left: 45%; /* Căn giữa theo chiều ngang */
+
+    transform: translateX(-100%); /* Căn giữa hoàn toàn */
+    z-index: 15; /* Đảm bảo chỉ báo nằm trên cùng */ 
+} 
+
+/* ================================================================= */
+/* SECTION: Organization nữa còn lâu mới foooter aaa bực cả mình */
+/* ================================================================= */
+ .Mindvestor-for-organization {
+    padding: 60px 0; /* Khoảng cách trên và dưới cho section */
+    background-color: #ffffff; /* Màu nền nhẹ cho section */
+ }
+.Mindvestor-for-organization .container1 {
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung */
+    padding-bottom: 20px; /* Khoảng cách bên trong container */
+}
+ .Mindvestor-for-organization h2 {
+    font-size: 2.5rem; /* Kích thước tiêu đề lớn */
+    font-weight: 700; /* Đậm hơn */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    color: hsl(186.98 100% 8.43%); /* Màu chữ tiêu đề */
+    }
+
+.Mindvestor-for-organization .btn{
+    display: inline-block ;/* Hiển thị dưới dạng khối nội tuyến */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 20px; /* Padding cho nút */
+    margin: 10px;
+    font-size: 1rem; /* Kích thước chữ nút */
+    cursor: pointer; /* Hiển thị con trỏ tay khi hover */
+    border-radius: 5px; /* Bo góc nút */
+    text-decoration: none; /* Bỏ gạch chân */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+}
+.Mindvestor-for-organization .btn:hover {
+    margin-bottom: 5px;
+}
+.Mindvestor-for-organization .btn-pri{
+   background-color: #fa8805; /* Màu nền nút */
+    color: hsl(0, 0%, 100%) !important; /* Màu chữ nút */
+}
+.Mindvestor-for-organization .container2 .btn-sec{
+   background-color: hsl(186.98 100% 8.43%); /* Màu nền nút */
+    color: hsl(0, 0%, 100%) ; /* Màu chữ nút */
+    border-color: #fff;
+}
+.Mindvestor-for-organization .container1 .btn-sec{
+  background-color: #fff;
+  border-color: hsl(186.98 100% 8.43%);
+  color:hsl(186.98 100% 8.43%);
+}
+
+
+.Mindvestor-for-organization .container2 {
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    position: relative;
+    gap: 40px;
+    padding: 30px;
+    align-items: center; 
+}
+
+.Mindvestor-for-organization .container2::before {
+    content: "";
+    position: absolute;
+      right: 0;
+    top: 70px; /* đẩy xuống một chút */
+    width: 100%; /* hoặc bạn thay bằng chiều rộng phù hợp */
+    height: 70%; /* nhỏ hơn ảnh */
+    background-color: hsl(186.98 100% 8.43%); /* màu nền */
+    z-index: 0;
+}
+.Mindvestor-for-organization .left {
+      padding: 0;
+      display: flex;
+      justify-content: right;
+      position: relative;
+    z-index: 1; /* đẩy text lên trên lớp nền */
+    }
+.Mindvestor-for-organization .right {
+      padding: 20px;
+      width: 450px; /* Giới hạn chiều rộng của phần bên phải */
+      position: relative;
+    z-index: 1; /* đẩy text lên trên lớp nền */
+      justify-content: left;
+    }
+.Mindvestor-for-organization .container2 img{
+    width: 450px !important; /* Chiều rộng ảnh */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    border-radius: 10px; /* Bo góc ảnh */
+    margin: 0 0 auto 30px; /* Căn giữa ảnh */
+
+}
+
+.Mindvestor-for-organization .container2 h4{
+    font-size:20px !important; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Đậm hơn */
+    color: #dcd3d2; /* Màu chữ tiêu đề */
+}
+.Mindvestor-for-organization .container2 h3{
+    font-size:45px !important; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Đậm hơn */
+    color: #ffffff; /* Màu chữ tiêu đề */
+}
+.Mindvestor-for-organization .container2 p{
+    font-size:15px !important; /* Kích thước chữ tiêu đề */
+    color: #ffffff; /* Màu chữ tiêu đề */
+}
+
+/*Khoa học chet tit*/
+.carousel-container{
+    margin-bottom: 2rem;
+    padding:10px;
+    display: flex;
+}
+#course-display {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  overflow-x: auto; /* cho phép cuộn ngang */
+  padding-bottom: 10px; /* khoảng cách chân */
+  -webkit-overflow-scrolling: touch; /* mượt trên iOS */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px; /* khoảng cách giữa các cards */
+  scroll-behavior: smooth; /* cuộn mượt */
+}
+.cards {
+  width: 280px; /* độ rộng chuẩn cho card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.15);
+}
+
+.cards a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.cards img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.course-main-content {
+  padding: 12px 15px;
+}
+
+.course-title .mid-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+  color: #222;
+  min-height: 56px; /* cố định chiều cao để các card đều nhau */
+  overflow: hidden;
+}
+
+.course-cteator.small-text {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-number {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #f39c12; /* màu vàng cho điểm sao */
+}
+
+.rating-icon .icon {
+  color: #f39c12;
+  font-size: 14px;
+}
+
+.rating-number {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 8px;
+}
+
+.course-detail {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.course-detail span {
+  display: inline-block;
+}
+
+.course-detail span:nth-child(2),
+.course-detail span:nth-child(4) {
+  color: #ccc;
+}
+
+.course-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.buy-box-price.mid-heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #e74c3c; /* đỏ nổi bật */
+}
+
+.buy-box-price.original-price normal-text {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* Responsive: nhỏ hơn 350px thu hẹp card */
+@media (max-width: 350px) {
+  .cards {
+    width: 100%;
+  }
+}
+
+
+.course-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.course-info {
+  padding: 12px 16px;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #222;
+}
+
+.course-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.course-rating {
+  font-size: 0.9rem;
+  color: #f39c12; /* màu vàng cho rating */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.course-rating .count {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 6px;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  font-weight: 400;
+  color: #999;
+  margin-left: 8px;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.badge-bestseller {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 12px;
+  user-select: none;
+  text-transform: uppercase;
+}
+.cards {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu chữ */
+}
+
+
+@media (max-width: 991px) {
+    .Mindvestor-for-organization .container2 {
+        flex-direction: column; /* Chuyển sang bố cục cột */
+        text-align: center; /* Căn giữa nội dung trong container2 */
+    }
+
+    .Mindvestor-for-organization .container2 .left,
+    .Mindvestor-for-organization .container2 .right {
+        padding: 30px; /* Điều chỉnh padding */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        flex: none; /* Bỏ flex để không ảnh hưởng đến chiều rộng */
+    }
+
+    .Mindvestor-for-organization .container2 .left img {
+        max-width: 80%; /* Giảm kích thước ảnh trên mobile */
+        margin: 0 auto; /* Căn giữa ảnh */
+    }
+
+    .Mindvestor-for-organization .container2 .right h3 {
+        font-size: 1.8em; /* Giảm cỡ chữ */
+    }
+
+    /* Điều chỉnh khoảng cách cho các nút trong container2 */
+    .Mindvestor-for-organization .container2 .right .btn {
+        margin: 10px; /* Đảm bảo khoảng cách */
+    }
+}
+
+/* Đối với màn hình nhỏ hơn 576px (ví dụ: điện thoại) */
+@media (max-width: 575px) {
+    .Mindvestor-for-organization {
+        padding: 40px 15px; /* Giảm padding tổng thể */
+    }
+
+    .Mindvestor-for-organization .container1 {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .Mindvestor-for-organization .container1 h2 {
+        font-size: 2em; /* Giảm cỡ chữ */
+    }
+
+    .Mindvestor-for-organization .container1 p {
+        font-size: 1em;
+    }
+
+    .Mindvestor-for-organization .container1 .btn {
+        display: block; /* Mỗi nút một dòng */
+        margin: 10px auto; /* Căn giữa nút */
+        width: 80%; /* Chiếm phần lớn chiều rộng */
+        max-width: 250px;
+    }
+
+    .Mindvestor-for-organization .container2 {
+        padding: 0; /* Bỏ padding ngoài cùng của container2 */
+        border-radius: 0; /* Bỏ bo tròn nếu muốn tràn cạnh màn hình */
+        box-shadow: none; /* Bỏ shadow nếu muốn tràn cạnh màn hình */
+    }
+
+    .Mindvestor-for-organization .container2 .left,
+    .Mindvestor-for-organization .container2 .right {
+        padding: 20px; /* Giảm padding cho nội dung */
+    }
+
+    .Mindvestor-for-organization .container2 .right h3 {
+        font-size: 1.6em;
+    }
+
+    .Mindvestor-for-organization .container2 .right p {
+        font-size: 0.9em;
+    }
+
+    .Mindvestor-for-organization .container2 .right .btn {
+        display: block; /* Mỗi nút một dòng */
+        margin: 10px auto; /* Căn giữa nút */
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
