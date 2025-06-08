@@ -33,7 +33,7 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
         // Form có thể được gửi ở đây
         this.submit(); // Chỉ gửi form nếu mọi thứ hợp lệ
         alert("Your order has been placed successfully!");
-        window.location.href = 'trangchu.html';  
+        window.location.href = 'index.html';  
     } else {
         // Thông báo rằng có trường không hợp lệ
         alert("Please review the form fields and try again!");
