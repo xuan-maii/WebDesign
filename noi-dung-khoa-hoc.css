@@ -25,12 +25,13 @@ body {
     height: 56px;
 }
 #lec-head{
+    
     height: 100%;
     padding: 0 1rem;
     width: 100%;
     position: relative;
 }
-#header1{
+.header1{
     display: flex;
     justify-content: space-between;
     align-items: center;
