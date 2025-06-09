@@ -507,6 +507,7 @@ border : 1px solid #fe6b16;                  /* bỏ viền */
     align-items: center; 
 }
 
+/*chỉnh background phía sau màu xanh*/
 .Mindvestor-for-organization .container2::before {
     content: "";
     position: absolute;
