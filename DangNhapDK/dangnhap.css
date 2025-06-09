@@ -20,24 +20,13 @@ body {
 }
 
 .illustration-section {
-    flex: 1;
+    flex: 1; /* điều chỉnh kích thước class*/
     background-color: #fdfcfa; /* Or a color that matches the illustration background */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px; /* Add some padding */
     position: relative; /* For potential absolute positioning of the illustration */
-}
-
-.illustration-placeholder {
-    /* This is just a placeholder to represent the illustration space */
-    width: 100%;
-    height: 100%;
-    /* You might add a background image here or a specific SVG */
-    background-image: url('https://via.placeholder.com/400x400/f0f0f0?text=Your+Illustration+Here'); /* Placeholder image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .login-section {
@@ -57,11 +46,7 @@ body {
     line-height: 1.3;
 }
 
-.login-subtitle{
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
-}
+
 
 .login-form {
     width: 100%;
@@ -69,24 +54,7 @@ body {
     margin-bottom: 20px;
 }
 
-.login-form label {
-    display: block; /* For screen readers */
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
 
-.sr-only { /* Screen reader only text */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
 
 .login-form input[type="email"] {
     width: calc(100% - 20px); /* Account for padding */
@@ -114,10 +82,6 @@ body {
     text-decoration: none; /* Remove underline for button */
 }
 
-.continue-email-btn:hover {
-    background-color: #574f64; /* Slightly darker purple on hover */
-}
-
 .or-divider {
     display: flex;
     align-items: center;
@@ -128,10 +92,10 @@ body {
     font-size: 14px;
 }
 
-.or-divider::before,
+.or-divider::before, /*trước và sau divier */
 .or-divider::after {
     content: '';
-    flex: 1;
+    flex: 1; /*nỏ ra kín*/
     border-bottom: 1px solid #eee;
 }
 
@@ -153,9 +117,6 @@ body {
     background-color: white;
     font-size: 22px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -198,6 +159,7 @@ body {
 .org-login-btn:hover {
     text-decoration: underline;
 }
+
 img{
     max-width: 100%;
     height: auto;
@@ -218,10 +180,6 @@ img{
         padding: 20px;
     }
 
-    .illustration-placeholder {
-        width: 80%; /* Make illustration smaller on mobile */
-        height: 200px;
-    }
 
     .login-section {
         padding: 30px 20px;
@@ -303,7 +261,7 @@ img{
     width: 40px;
     height: 40px;
     margin: 0 auto 15px;
-    animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; /*spin được viết ở dưới*/
 }
 
 @keyframes spin {
